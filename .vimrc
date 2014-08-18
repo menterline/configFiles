@@ -10,13 +10,10 @@ Plugin 'bling/vim-airline'
 
 call vundle#end()
 
-
-
-
 syntax on
 filetype plugin indent on
 
-set noswapfile number nocompatible 
+set noswapfile number 
 set hidden autochdir nowrap
 set backspace=2
 set smartindent tabstop=4
@@ -33,9 +30,6 @@ colorscheme desert
 
 "various leader mappings
 let mapleader = ";"
-filetype plugin indent off
-nnoremap <Leader>n :NERDTreeToggle<CR>
-nnoremap <Leader>p :CtrlP ~/<CR>
 noremap <Leader>w :w<CR>
 :map <leader>t :tabnew<CR>
 
@@ -48,8 +42,8 @@ map <S-l> :wincmd l<CR>
 
 
 "cycle through open buffers in one window
-:map <C-S-l> :bnext!<CR>
-:map <C-S-h> :bprev!<CR>
+:map <C-S-l> :bn!<CR>
+:map <C-S-h> :bp!<CR>
 
 "airline settings
 let g:airline_powerline_fonts=1
