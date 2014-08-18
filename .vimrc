@@ -1,8 +1,20 @@
-let mapleader = ";"
-execute pathogen#infect()
-call pathogen#helptags()
-filetype plugin indent on
+filetype off
+set nocompatible
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'bling/vim-airline'
+
+call vundle#end()
+
+
+
+
 syntax on
+filetype plugin indent on
 
 set noswapfile number nocompatible 
 set hidden autochdir nowrap
@@ -20,6 +32,8 @@ colorscheme desert
 :imap kj <Esc>
 
 "various leader mappings
+let mapleader = ";"
+filetype plugin indent off
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>p :CtrlP ~/<CR>
 noremap <Leader>w :w<CR>
@@ -43,3 +57,6 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
+let g:airline#extensions#tabline#enabled = 1
+
+
