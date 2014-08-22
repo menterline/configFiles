@@ -22,6 +22,7 @@ set laststatus=2
 set encoding=utf-8
 set timeoutlen=50
 set t_Co=256
+set relativenumber
 
 colorscheme desert
 
