@@ -29,7 +29,7 @@ colorscheme desert
 :imap kj <Esc>
 
 "various leader mappings
-let mapleader = ";"
+let mapleader = " "
 noremap <Leader>w :w<CR>
 :map <leader>t :tabnew<CR>
 
