@@ -1,6 +1,5 @@
 filetype off
 set nocompatible
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -21,6 +20,7 @@ set shiftwidth=4
 set laststatus=2
 set encoding=utf-8
 set timeoutlen=50
+set background=dark
 set t_Co=256
 set ignorecase
 colorscheme desert
@@ -29,7 +29,7 @@ colorscheme desert
 :imap kj <Esc>
 
 "various leader mappings
-let mapleader = " "
+let mapleader = ";"
 noremap <Leader>w :w<CR>
 :map <leader>t :tabnew<CR>
 
@@ -44,6 +44,16 @@ map <S-l> :wincmd l<CR>
 "cycle through open buffers in one window
 :map <C-S-l> :bn!<CR>
 :map <C-S-h> :bp!<CR>
+
+"use arrow keys to resize
+noremap <up>    <C-W>+
+noremap <down>  <C-W>-
+noremap <left>  3<C-W><
+noremap <right> 3<C-W>>
+
+"move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 "airline settings
 let g:airline_powerline_fonts=1
