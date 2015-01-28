@@ -1,5 +1,6 @@
 set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
+colorscheme desert
 
 call vundle#begin()
 
@@ -7,10 +8,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'jlanzarotta/bufexplorer'
-Plugin 'ap/vim-buftabline'
+Plugin 'bling/vim-airline'
 call vundle#end()
+
 set laststatus=2
-set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ %)
 syntax on
 filetype plugin indent on
 
@@ -22,7 +23,6 @@ set encoding=utf-8
 set timeoutlen=50
 set background=dark t_Co=256
 set ignorecase autochdir
-colorscheme desert
 
 :imap jk <Esc>
 :imap kj <Esc>
@@ -52,6 +52,17 @@ noremap <C-right> 3<C-W>>
 "move visual block
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
+"customize airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#right_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#right_alt_sep = '|'
+let g:airline_right_sep = ' '
+let g:airline_left_sep = ' '
+let g:airline_left_alt_sep = '|'
+let g:airline_right_alt_sep = '|'
 
 "function to delete any trailing whitespace in current file
 function! ShowSpaces(...)
