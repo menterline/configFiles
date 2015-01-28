@@ -30,7 +30,7 @@ do
 		v)
 			VIMDEST=$OPTARG
 			cp vim/.vimrc $VIMDEST/
-			git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+			git clone https://github.com/gmarik/Vundle.vim.git $VIMDEST/.vim/bundle/Vundle.vim
 			;;
 		t)
 			TMUXDEST=$OPTARG
