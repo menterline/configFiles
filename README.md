@@ -1,9 +1,5 @@
-add executable permissions to install.sh
-
-chmod +x install.sh
-
-Run install.sh to clone vundle and move .vimrc and .tmux.conf into the home dir
-
-./install.sh
+These repo has folders for each application that may require 
+a configuration file.  Run ./installStuff.sh -h to get help
+and see what options are available
 
 ENJOY
