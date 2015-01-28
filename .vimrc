@@ -1,38 +1,36 @@
-filetype off
 set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
+
 call vundle#begin()
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-airline'
-Plugin 'vim-scripts/a.vim'
-call vundle#end()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'jlanzarotta/bufexplorer'
 
+call vundle#end()
+set laststatus=2
+set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ %)
 syntax on
 filetype plugin indent on
 
 set noswapfile number
 set hidden autochdir nowrap
 set backspace=2
-set smartindent tabstop=4
-set shiftwidth=4
-set laststatus=2
+set smartindent tabstop=4 shiftwidth=4
 set encoding=utf-8
 set timeoutlen=50
-set background=dark
-set t_Co=256
-set ignorecase
+set background=dark t_Co=256
+set ignorecase autochdir
 colorscheme desert
 
 :imap jk <Esc>
 :imap kj <Esc>
 
-"various leader mappings
-let mapleader = ";"
+let mapleader = " "
 noremap <Leader>w :w<CR>
-:map <leader>t :tabnew<CR>
-
+noremap <leader>t :tabnew<CR>
+noremap <leader>c :nohl<CR>
 
 "move through split windows using Shift
 map <S-h> :wincmd h<CR>
@@ -46,22 +44,14 @@ map <S-l> :wincmd l<CR>
 :map <C-S-h> :bp!<CR>
 
 "use arrow keys to resize
-noremap <up>    <C-W>+
-noremap <down>  <C-W>-
-noremap <left>  3<C-W><
-noremap <right> 3<C-W>>
+noremap <C-up>    <C-W>+
+noremap <C-down>  <C-W>-
+noremap <C-left>  3<C-W><
+noremap <C-right> 3<C-W>>
 
 "move visual block
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-
-"airline settings
-let g:airline_powerline_fonts=1
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_symbols.space = "\ua0"
-let g:airline#extensions#tabline#enabled = 1
 
 "function to delete any trailing whitespace in current file
 function! ShowSpaces(...)
