@@ -1,18 +1,17 @@
 set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
-colorscheme desert
-
+colorscheme default
 call vundle#begin()
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'gmarik/Vundle.vim'
-Plugin 'jlanzarotta/bufexplorer'
 Plugin 'bling/vim-airline'
+
 call vundle#end()
 
 set laststatus=2
-syntax on
+syntax enable
 filetype plugin indent on
 
 set noswapfile number
@@ -21,9 +20,8 @@ set backspace=2
 set smartindent tabstop=4 shiftwidth=4
 set encoding=utf-8
 set timeoutlen=50
-set background=dark t_Co=256
+set t_Co=256 background=light
 set ignorecase autochdir
-
 :imap jk <Esc>
 :imap kj <Esc>
 
@@ -63,6 +61,8 @@ let g:airline_right_sep = ' '
 let g:airline_left_sep = ' '
 let g:airline_left_alt_sep = '|'
 let g:airline_right_alt_sep = '|'
+let g:airline_section_y = ''
+let g:airline_theme = 'bubblegum'
 
 "function to delete any trailing whitespace in current file
 function! ShowSpaces(...)
