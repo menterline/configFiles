@@ -19,8 +19,8 @@ EOF
 VIMDEST= 
 TMUXDEST= 
 I3DEST= 
-
-while getopts "hv:t:i" OPTION
+BASHDEST=
+while getopts "hv:t:i:b" OPTION
 do
 	case $OPTION in
 		h)
@@ -29,16 +29,20 @@ do
 			;;
 		v)
 			VIMDEST=$OPTARG
-			cp vim/.vimrc $VIMDEST/
+			ln -sf vim/.vimrc $VIMDEST/
 			git clone https://github.com/gmarik/Vundle.vim.git $VIMDEST/.vim/bundle/Vundle.vim
 			;;
 		t)
 			TMUXDEST=$OPTARG
-			cp tmux/.tmux.conf $TMUXDEST/
+			ln -sf tmux/.tmux.conf $TMUXDEST/
 			;;
 		i)
 			I3DEST=$OPTARG
-			cp i3/config $I3DEST/
+			ln -sf i3/config $I3DEST/
+			;;
+		b)
+			BASHDEST=$OPTARG
+			ln -sf bash/.bashrc $BASHDEST/
 			;;
 		?)
 			usage
