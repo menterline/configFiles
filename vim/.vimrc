@@ -31,10 +31,10 @@ noremap <leader>t :tabnew<CR>
 noremap <leader>c :nohl<CR>
 
 "move through split windows using Shift
-map <S-h> :wincmd h<CR>
-map <S-j> :wincmd j<CR>
-map <S-k> :wincmd k<CR>
-map <S-l> :wincmd l<CR>
+map <C-h> :wincmd h<CR>
+map <C-j> :wincmd j<CR>
+map <C-k> :wincmd k<CR>
+map <C-l> :wincmd l<CR>
 
 
 "cycle through open buffers in one window
