@@ -7,7 +7,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
-Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 
@@ -30,7 +29,7 @@ let mapleader = " "
 noremap <Leader>w :w<CR>
 noremap <leader>t :tabnew<CR>
 noremap <leader>c :nohl<CR>
-noremap <leader>n :NERDTreeToggle<CR>
+
 "move through split windows using Shift
 map <C-h> :wincmd h<CR>
 map <C-j> :wincmd j<CR>
@@ -52,11 +51,6 @@ noremap <C-right> 3<C-W>>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-"Write to readonly file
-command ROW execute "w !sudo tee % >/dev/null"
-
-"delete buffer without quitting the window
-command BUFD execute "bp | bd #"
 "customize airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
