@@ -26,16 +26,24 @@ set ignorecase autochdir
 :imap jk <Esc>
 :imap kj <Esc>
 
+"Write to readonly file
+command ROW execute "w !sudo tee % >/dev/null"
+
+"delete buffer without quitting the window
+command BUFD execute "bp | bd #"
+
 let mapleader = " "
 noremap <Leader>w :w<CR>
 noremap <leader>t :tabnew<CR>
 noremap <leader>c :nohl<CR>
 noremap <leader>n :NERDTreeToggle<CR>
+noremap <leader>d :BUFD<CR>
+
 "move through split windows using Shift
-map <C-h> :wincmd h<CR>
-map <C-j> :wincmd j<CR>
-map <C-k> :wincmd k<CR>
-map <C-l> :wincmd l<CR>
+map <S-h> :wincmd h<CR>
+map <S-j> :wincmd j<CR>
+map <S-k> :wincmd k<CR>
+map <S-l> :wincmd l<CR>
 
 
 "cycle through open buffers in one window
@@ -52,11 +60,7 @@ noremap <C-right> 3<C-W>>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-"Write to readonly file
-command ROW execute "w !sudo tee % >/dev/null"
 
-"delete buffer without quitting the window
-command BUFD execute "bp | bd #"
 "customize airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
