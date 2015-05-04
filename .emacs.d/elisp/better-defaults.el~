@@ -1,22 +1,22 @@
-(ido-mode 1)
-(ido-vertical-mode 1)
-(setq ido-enable-flex-matching t)
+  (ido-mode 1)
+  (vertical-ido-mode 1)
+  (setq ido-enable-flex-matching t)
 
-(toggle-truncate-lines 0)
-(menu-bar-mode -1)
-(when (fboundp 'tool-bar-mode)
-  (tool-bar-mode -1))
-(when (fboundp 'scroll-bar-mode)
-  (scroll-bar-mode -1))
+  (toggle-truncate-lines 0)
+  (menu-bar-mode -1)
+  (when (fboundp 'tool-bar-mode)
+    (tool-bar-mode -1))
+  (when (fboundp 'scroll-bar-mode)
+    (scroll-bar-mode -1))
 
-(autoload 'zap-up-to-char "misc"
-  "Kill up to, but not including ARGth occurrence of CHAR." t)
+  (autoload 'zap-up-to-char "misc"
+    "Kill up to, but not including ARGth occurrence of CHAR." t)
 
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'forward)
+  (require 'uniquify)
+  (setq uniquify-buffer-name-style 'forward)
 
-(show-paren-mode 1)
-(setq-default indent-tabs-mode nil)
+  (show-paren-mode 1)
+  (setq-default indent-tabs-mode nil)
   (setq x-select-enable-clipboard t
         x-select-enable-primary t
         save-interprogram-paste-before-kill t

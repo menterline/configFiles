@@ -6,5 +6,3 @@
 (require 'better-defaults)
 (require 'my_keybindings)
 
-
-(ido-vertical-mode 1)
