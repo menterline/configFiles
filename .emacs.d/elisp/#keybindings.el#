@@ -1,0 +1,3 @@
+;;Evil mode bindings
+(key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
+(key-chord-define evil-insert-state-map "kj" 'evil-normal-state)

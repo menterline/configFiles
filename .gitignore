@@ -1,1 +1,4 @@
 bundle/
+.emacs.d/bundle/
+.emacs.d/backups/
+.emacs.d/places
