@@ -1,12 +1,14 @@
 ; list the packages you want
 (when (<= emacs-major-version 23)
-  (require 'package)
-  (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-			   ("marmalade" . "https://marmalade-repo.org/packages/")
-			   ("melpa" . "http://melpa.org/packages/")))
+ ; (require 'package)
+ ; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+ ;   		   ("marmalade" . "https://marmalade-repo.org/packages/")
+ ;   		   ("melpa" . "http://melpa.org/packages/")))
 
-  (package-initialize)
-
+ ; (package-initialize)
+  (add-to-list 'load-path (concat user-emacs-directory "elisp/evil") )	
+	(require 'evil)
+	(evil-mode 1)
   )
 (when (>= emacs-major-version 24)
   (require 'package)
