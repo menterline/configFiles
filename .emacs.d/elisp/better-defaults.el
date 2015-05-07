@@ -2,7 +2,7 @@
 (setq ido-decorations
       '("\n " "" "\n" "" "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]"))
 
-(toggle-truncate-lines 0)
+(toggle-truncate-lines t)
 (menu-bar-mode -1)
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
@@ -26,8 +26,7 @@
         ring-bell-function 'ignore
         load-prefer-newer t
         ediff-window-setup-function 'ediff-setup-windows-plain
-        backup-directory-alist `(("." . ,(concat user-emacs-directory
-                                                 "backups")))
+        backup-directory-alist `(("." . ,(concat user-emacs-directory "backups")))
         scroll-step 1
         scrollconservatively 10000)
 

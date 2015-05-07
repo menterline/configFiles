@@ -13,8 +13,7 @@
 
 (global-set-key (kbd "C-c c") 'compile)
 
-(global-evil-leader-mode 1)
-(evil-leader/set-leader "<SPC>")
+(evil-leader/set-leader ",")
 (evil-leader/set-key
   "l" 'goto-line
   "a" 'ace-window
@@ -22,6 +21,7 @@
   "b" 'ibuffer
   "w" 'save-buffer)
 
+(global-evil-leader-mode 1)
 ; Evil mode bindings
   (evil-mode 1)
   (key-chord-mode 1)
