@@ -1,5 +1,4 @@
 (ido-mode 1)
-;(ido-vertical-mode 1)
 (setq ido-enable-flex-matching t)
 
 (toggle-truncate-lines 0)
@@ -40,5 +39,6 @@
  (lambda () 
   (ibuffer-switch-to-saved-filter-groups "default")
   (ibuffer-filter-by-filename "^[^*]")))
+
 
 (provide 'better-defaults)

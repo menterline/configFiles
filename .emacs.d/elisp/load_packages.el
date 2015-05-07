@@ -10,7 +10,7 @@
   )
 (when (>= emacs-major-version 24)
   (require 'package)
-  (setq package-list '(2048-game evil evil-leader ace-window chess org
+  (setq package-list '(2048-game evil evil-leader ace-window chess org smex
 				 tabbar undo-tree key-chord ido-vertical-mode
 				 ))
   
@@ -29,6 +29,8 @@
 					; install the missing packages
   (dolist (package package-list)
     (unless (package-installed-p package)
-      (package-install package))))
+      (package-install package)))
 
+  (ido-vertical-mode 1)
+  )
 (provide 'load_packages)

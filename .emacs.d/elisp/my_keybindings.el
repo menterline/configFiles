@@ -11,6 +11,7 @@
 (global-set-key (kbd "C-M-s") 'isearch-forward)
 (global-set-key (kbd "C-M-r") 'isearch-backward)
 
+(global-set-key (kbd "C-c c") 'compile)
 
 ;; If version >= 24, more packages available
 (when (>= emacs-major-version 24) 
