@@ -7,8 +7,12 @@
 
  ; (package-initialize)
   (add-to-list 'load-path (concat user-emacs-directory "elisp/evil") )	
+  (add-to-list 'load-path (concat user-emacs-directory "elisp/packages") )	
 	(require 'evil)
 	(evil-mode 1)
+	(require 'evil-leader)
+	(require 'key-chord)
+    (require 'smex)
   )
 (when (>= emacs-major-version 24)
   (require 'package)

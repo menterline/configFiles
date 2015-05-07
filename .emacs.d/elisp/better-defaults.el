@@ -1,5 +1,6 @@
 (ido-mode 1)
-(setq ido-enable-flex-matching t)
+(setq ido-decorations
+      '("\n " "" "\n" "" "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]"))
 
 (toggle-truncate-lines 0)
 (menu-bar-mode -1)
