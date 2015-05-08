@@ -1,7 +1,7 @@
 set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
 colorscheme default
-call plug#begin('.vim/plugged')
+call plug#begin('.nvim/plugged')
 
 Plug 'tpope/vim-fugitive'
 Plug 'kien/ctrlp.vim'
@@ -40,12 +40,10 @@ noremap <leader>n :NERDTreeToggle<CR>
 noremap <leader>d :BUFD<CR>
 
 "move through split windows using Shift
-if has ('nvim')
-	tnoremap <C-h> <C-\><C-n><C-w>h<CR>
-	tnoremap <C-j> <C-\><C-n><C-w>j<CR>
-	tnoremap <C-k> <C-\><C-n><C-w>k<CR>
-	tnoremap <C-l> <C-\><C-n><C-w>l<CR>
-endif
+tnoremap <C-h> <C-\><C-n><C-w>h<CR>
+tnoremap <C-j> <C-\><C-n><C-w>j<CR>
+tnoremap <C-k> <C-\><C-n><C-w>k<CR>
+tnoremap <C-l> <C-\><C-n><C-w>l<CR>
 map <C-h> <C-\><C-n><C-w>h<CR>
 map <C-j> <C-\><C-n><C-w>j<CR>
 map <C-k> <C-\><C-n><C-w>k<CR>

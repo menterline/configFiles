@@ -21,7 +21,6 @@
   "b" 'ibuffer
   "w" 'save-buffer)
 
-(global-evil-leader-mode 1)
 ; Evil mode bindings
   (evil-mode 1)
   (key-chord-mode 1)
