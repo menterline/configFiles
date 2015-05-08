@@ -21,7 +21,7 @@ set backspace=2
 set smartindent tabstop=4 shiftwidth=4
 set encoding=utf-8
 set timeoutlen=50
-set t_Co=256 background=light
+set t_Co=256 background=dark
 set ignorecase autochdir
 :imap jk <Esc>
 :imap kj <Esc>
@@ -32,12 +32,15 @@ command ROW execute "w !sudo tee % >/dev/null"
 "delete buffer without quitting the window
 command BUFD execute "bp | bd #"
 
+command MAKE execute "make | copen"
+
 let mapleader = " "
 noremap <Leader>w :w<CR>
 noremap <leader>t :tabnew<CR>
 noremap <leader>c :nohl<CR>
 noremap <leader>n :NERDTreeToggle<CR>
 noremap <leader>d :BUFD<CR>
+noremap <leader>m :MAKE
 
 "move through split windows using Shift
 map <S-h> :wincmd h<CR>
@@ -47,8 +50,8 @@ map <S-l> :wincmd l<CR>
 
 
 "cycle through open buffers in one window
-:map <C-S-l> :bn!<CR>
-:map <C-S-h> :bp!<CR>
+:map <C-l> :bn!<CR>
+:map <C-h> :bp!<CR>
 
 "use arrow keys to resize
 noremap <C-up>    <C-W>+
