@@ -1,5 +1,4 @@
 set nocompatible
-set rtp+=~/.vim/bundle/Vundle.vim
 colorscheme default
 call plug#begin('.nvim/plugged')
 
@@ -8,6 +7,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'gmarik/Vundle.vim'
 Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-dispatch'
 
 call plug#end()
 
@@ -22,7 +22,7 @@ set smartindent tabstop=4 shiftwidth=4
 set encoding=utf-8
 set timeoutlen=50
 set t_Co=256 background=light
-set ignorecase autochdir
+set smartcase autochdir
 :imap jk <Esc>
 :imap kj <Esc>
 
