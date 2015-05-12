@@ -1,8 +1,8 @@
 (ido-mode 1)
 (setq ido-decorations
       '("\n " "" "\n" "" "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]"))
-
-(toggle-truncate-lines t)
+(setq ido-everywhere t)
+(setq-default truncate-lines t)
 (global-linum-mode 1)
 (menu-bar-mode -1)
 (when (fboundp 'tool-bar-mode)
@@ -41,5 +41,8 @@
   (ibuffer-switch-to-saved-filter-groups "default")
   (ibuffer-filter-by-filename "^[^*]")))
 
+(setq inhibit-startup-message t
+      inhibit-startup-echo-area-message t)
+(define-key global-map (kbd "RET") 'newline-and-indent)
 
 (provide 'better-defaults)
