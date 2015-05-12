@@ -3,6 +3,7 @@
       '("\n " "" "\n" "" "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]"))
 
 (toggle-truncate-lines t)
+(global-linum-mode 1)
 (menu-bar-mode -1)
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))

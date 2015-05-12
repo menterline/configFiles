@@ -4,7 +4,9 @@
  ; (package-initialize)
   (add-to-list 'load-path (concat user-emacs-directory "elisp/packages") )	
   (require 'evil)
+
   (require 'key-chord)
+  (key-chord-mode 1)
   )
 
 
