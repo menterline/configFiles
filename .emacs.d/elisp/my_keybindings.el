@@ -13,7 +13,8 @@
 
 (global-set-key (kbd "C-c c") 'compile)
 
-(evil-leader/set-leader ",")
+(global-evil-leader-mode 1)
+(evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
   "l" 'goto-line
   "a" 'ace-window
@@ -24,7 +25,7 @@
 ; Evil mode bindings
   (evil-mode 1)
   (key-chord-mode 1)
-  (setq key-chord-two-keys-delay 0.25)
+  (setq key-chord-two-keys-delay 0.50)
   (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
   (key-chord-define evil-insert-state-map "kj" 'evil-normal-state)
 
