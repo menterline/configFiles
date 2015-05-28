@@ -1,6 +1,6 @@
 set nocompatible
 colorscheme default
-call plug#begin('.nvim/plugged')
+call plug#begin('~/.nvim/plugged')
 
 Plug 'tpope/vim-fugitive'
 Plug 'kien/ctrlp.vim'
