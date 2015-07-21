@@ -10,6 +10,10 @@ export PS1="\[\e[00;31m\]\u\[\e[0m\]\[\e[00;34m\]@\[\e[0m\]\[\e[00;31m\]\h\[\e[0
 # Light background
 #export PS1="\[\e[00;30m\]\u@\[\e[0m\]\[\e[00;31m\]\h\[\e[0m\]\[\e[00;30m\]:[\[\e[0m\]\[\e[00;34m\]\w\[\e[0m\]\[\e[00;30m\]]:\[\e[0m\]\[\e[00;37m\] \[\e[0m\]"
 
+# Git branch
+PS1+="\$(if git rev-parse --git-dir >/dev/null 2>&1; then echo \" [br:\[\e[0;36m\]\$(git rev-parse --abbrev-ref HEAD)\$(git diff HEAD --quiet || echo '\[\e[0;31m\]*')\[\e[0m\]]\"; fi )"
+
+PS1+="\n $  "
 
 alias ls='ls --color=auto'
 
