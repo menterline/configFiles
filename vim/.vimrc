@@ -1,7 +1,7 @@
 set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
 colorscheme default
-call plug#begin('.vim/plugged')
+call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
 Plug 'kien/ctrlp.vim'
