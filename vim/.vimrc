@@ -1,6 +1,11 @@
 set nocompatible
-set rtp+=~/.vim/bundle/Vundle.vim
-colorscheme default
+" If we don't have vim-plug installed, install it
+if empty(glob('~/.vim/autoload/plug.vim'))
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall
+endif
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
@@ -15,6 +20,7 @@ set laststatus=2
 syntax enable
 filetype plugin indent on
 
+colorscheme default
 set noswapfile number
 set hidden autochdir nowrap
 set backspace=2
