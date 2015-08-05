@@ -1,6 +1,11 @@
 set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
 colorscheme default
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
+endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
@@ -37,7 +42,8 @@ noremap <Leader>w :w<CR>
 noremap <leader>t :tabnew<CR>
 noremap <leader>c :nohl<CR>
 noremap <leader>n :NERDTreeToggle<CR>
-noremap <leader>d :BUFD<CR>
+noremap <leader>k :BUFD<CR>
+noremap <leader>d :Explore
 
 "move through split windows using Shift
 if has ('nvim')
