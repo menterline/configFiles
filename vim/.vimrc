@@ -1,4 +1,5 @@
 set nocompatible
+
 " If we don't have vim-plug installed, install it
 if empty(glob('~/.vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -43,7 +44,8 @@ noremap <Leader>w :w<CR>
 noremap <leader>t :tabnew<CR>
 noremap <leader>c :nohl<CR>
 noremap <leader>n :NERDTreeToggle<CR>
-noremap <leader>d :BUFD<CR>
+noremap <leader>k :BUFD<CR>
+noremap <leader>d :Explore
 
 "move through split windows using Shift
 if has ('nvim')

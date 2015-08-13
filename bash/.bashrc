@@ -15,7 +15,7 @@ PS1+="\$(if git rev-parse --git-dir >/dev/null 2>&1; then echo \" [br:\[\e[0;36m
 
 PS1+="\n $  "
 
-alias ls='ls --color=auto'
+alias ls='ls'
 
 ###
 #Git
