@@ -86,3 +86,11 @@ hs.hotkey.bind({"cmd", "alt"}, "Down", function()
   f.h = max.h - 20
   win:setFrame(f)
 end)
+
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "L", function()
+  hs.window.focusedWindow():focusWindowEast()
+end)
+
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "H", function()
+  hs.window.focusedWindow():focusWindowWest()
+end)
