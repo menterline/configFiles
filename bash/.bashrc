@@ -30,6 +30,7 @@ alias gdc='git diff --cached'
 ###
 
 alias sim='ssh xstats-sim@192.168.136.174'
+alias jump='ssh root@me-jump'
 alias src='cd /SevOneNMS/src/SevOneNMS/'
 alias bdi='SevOne-build internal only'
 alias Sac='SevOne-act check'

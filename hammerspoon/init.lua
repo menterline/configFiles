@@ -1,4 +1,9 @@
-hs.hotkey.bind({"cmd", "alt"}, "K", function()
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
+  hs.reload()
+  hs.alert.show("Config loaded")
+end)
+
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "K", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -6,7 +11,7 @@ hs.hotkey.bind({"cmd", "alt"}, "K", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind({"cmd", "alt"}, "H", function()
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "H", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -14,7 +19,7 @@ hs.hotkey.bind({"cmd", "alt"}, "H", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind({"cmd", "alt"}, "L", function()
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "L", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -22,18 +27,13 @@ hs.hotkey.bind({"cmd", "alt"}, "L", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind({"cmd", "alt"}, "J", function()
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "J", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
   f.y = f.y + 5
   win:setFrame(f)
 end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
-  hs.reload()
-end)
-hs.alert.show("Config loaded")
 
 hs.hotkey.bind({"cmd", "alt"}, "Left", function()
   local win = hs.window.focusedWindow()
@@ -93,25 +93,25 @@ hs.hotkey.bind({"cmd", "alt"}, "F", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.w = max.w - 10
   f.x = max.x + 5
-  f.y = max.y - 10
-  f.h = max.h - 5
+  f.w = max.w - 10
+  f.y = max.y + 5
+  f.h = max.h - 10
   win:setFrame(f)
 end)
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "L", function()
+hs.hotkey.bind({"cmd", "alt"}, "L", function()
   hs.window.focusedWindow():focusWindowEast()
 end)
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "H", function()
+hs.hotkey.bind({"cmd", "alt"}, "H", function()
   hs.window.focusedWindow():focusWindowWest()
 end)
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "J", function()
+hs.hotkey.bind({"cmd", "alt"}, "J", function()
   hs.window.focusedWindow():focusWindowSouth()
 end)
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "K", function()
+hs.hotkey.bind({"cmd", "alt"}, "K", function()
   hs.window.focusedWindow():focusWindowNorth()
 end)
